@@ -2,7 +2,7 @@
 
 The combination of the three terms (P, I, and D) leads to the PID controller whose output variable y(t) is equal to the addition of the P, I, and D controllers which is described by the following equation:
 
-y(t) = Kp*e(t) + Ki*Int(e(t)*dt) + Kd*de(t)/dt 
+y(t) = Kp * e(t) + Ki * Int(e(t) * dt) + Kd * de(t)/dt 
 
 ## Propotional Term
 The propotional term makes the current error signal multiplied with a gain (Kp) to get the controllers output. 
