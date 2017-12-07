@@ -5,8 +5,8 @@ The combination of the three terms (P, I, and D) leads to the PID controller who
 y(t) = Kp*e(t) + Int(e(t)*dt) + Kd*de(t)/dt 
 
 ## Propotional Term
-The propotional term makes the current error signal multiplied with a Gain (Kp) to get the controllers output. 
-A small Kp leads to the setpoint, but your controller performance will be slow. If Kp is increased, the output overshoots. 
+The propotional term makes the current error signal multiplied with a gain (Kp) to get the controllers output. 
+A small propotional gain Kp leads to the setpoint, but the controller performance will be slow. If Kp is increased, the controllers output overshoots. 
 
 ## Integral Term
 The integral term makes the current error signal value and duration multiplied with a Gain (Ki).
@@ -15,3 +15,20 @@ In addition, when the integral term is added to the propotional term, it acceler
 ## Derivative Term
 The derivative term makes the rate of change of the error signal multiplied with a Gain (Kd).
 Further, it slows the rate of change of the controller output and this effect is most noticeable close to the controller setpoint. 
+
+## Tuning PID Hyperparameters
+
+The PID hyperparameters was tuned experimental with the following algorithm[1]:
+
+- Set all gains to 0.
+- Increase Kd until the system oscillates.
+- Reduce Kd by a factor of 2-4.
+- Set Kp to about 1% of Kd.
+- Increase Kp until oscillations start.
+- Decrease Kp by a factor of 2-4.
+- Set Ki to about 1% of Kp.
+- Increase Ki until oscillations start.
+- Decrease Ki by a factor of 2-4.
+
+# References 
+[1] https://robotics.stackexchange.com/questions/167/what-are-good-strategies-for-tuning-pid-loops
