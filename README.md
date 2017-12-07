@@ -18,7 +18,7 @@ Further, it slows the rate of change of the controller output and this effect is
 
 ## Tuning PID Hyperparameters
 
-The PID hyperparameters was tuned experimental with the following algorithm[1]:
+The PID hyperparameters were tuned experimental with the following algorithm[1]:
 
 - Set all gains to 0.
 - Increase Kd until the system oscillates.
