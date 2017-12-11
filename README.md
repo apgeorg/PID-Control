@@ -1,5 +1,7 @@
 # PID Control
 
+The objective of this project is to implement a PID controller in C++ to maneuver the vehicle around a track. The simulator provides the cross track error (CTE) and the velocity in order to compute the appropriate steering angle. 
+
 The combination of the three terms (P, I, and D) leads to the PID controller whose output variable y(t) is equal to the addition of the P, I, and D controllers which is described by the following equation:
 
 y(t) = Kp * e(t) + Ki * Int(e(t) * dt) + Kd * de(t)/dt 
@@ -18,7 +20,7 @@ Further, it slows the rate of change of the controller output and this effect is
 
 ## Tuning PID Hyperparameters
 
-The PID hyperparameters were tuned experimental with the following algorithm[1]:
+The PID hyperparameters were tuned experimentally with the algorithm shown below[1] in order to control the steering angle based on the CTE while watching the effect on the behaviour of the car driving around the track.:
 
 - Set all gains to 0.
 - Increase Kd until the system oscillates.
