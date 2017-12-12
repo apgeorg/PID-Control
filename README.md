@@ -1,6 +1,7 @@
-# PID Control
+# PID Controller
 
-The objective of this project is to implement a PID controller in C++ to maneuver the vehicle around a track. The simulator provides the cross track error (CTE) and the velocity in order to compute the appropriate steering angle. 
+The objective of this project was to implement a PID controller in C++ to maneuver a vehicle around a track. 
+The simulator provides the cross track error (CTE) and the velocity in order to compute the appropriate steering angle. 
 
 ## Propotional Term
 The propotional term makes the current error signal multiplied with a gain (Kp) to get the controllers output. 
